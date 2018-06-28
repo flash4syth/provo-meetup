@@ -1,0 +1,51 @@
+Arguments: 
+  /usr/bin/node /home/jon4syth/.yarn/bin/yarn.js
+
+PATH: 
+  /home/jon4syth/.asdf/shims:/home/jon4syth/.asdf/bin:/home/jon4syth/.yarn/bin:/home/jon4syth/.config/yarn/global/node_modules/.bin:/home/jon4syth/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/local/go/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  10.5.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "repository": {},
+    "license": "MIT",
+    "scripts": {
+      "deploy": "brunch build --production",
+      "watch": "brunch watch --stdin"
+    },
+    "dependencies": {
+      "phoenix": "file:../deps/phoenix",
+      "phoenix_html": "file:../deps/phoenix_html"
+    },
+    "devDependencies": {
+      "babel-brunch": "6.1.1",
+      "brunch": "2.10.9",
+      "clean-css-brunch": "2.10.0",
+      "uglify-js-brunch": "2.10.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/babel-brunch: tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:80
+      at ClientRequest.onError (/home/jon4syth/.yarn/lib/cli.js:146218:17)
+      at Object.onceWrapper (events.js:273:13)
+      at ClientRequest.emit (events.js:182:13)
+      at Socket.socketErrorListener (_http_client.js:382:9)
+      at Socket.emit (events.js:182:13)
+      at emitErrorNT (internal/streams/destroy.js:82:8)
+      at emitErrorAndCloseNT (internal/streams/destroy.js:50:3)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
