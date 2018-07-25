@@ -1,0 +1,34 @@
+<article class="admin-page">
+  <section class="title-bar">
+    <h1>Admin Page</h1>
+  </section>
+  <section class="side-bar">
+    <a class="registered-numbers" href="registerednumbers">
+      Registered Numbers
+    </a>
+    <a class="subscription-requests" href="subscriptionrequests">
+      Subscription Requests
+    </a>
+    <a class="stop-numbers" href="stopnumbers">
+      Stop Numbers
+    </a>
+    <a class="admin-numbers" href="adminnumbers">
+      Admin Numbers
+    </a>
+    <a class="twilio-numbers" href="twilionumbers">
+      Twilio Numbers
+    </a>
+  </section>
+  <section class="number-list-section">
+    <ul class="number-list">
+      <li class="sms-row">
+        <input class="checkbox" type="checkbox" />
+        <span class="number">1234</span>
+      </li>
+      <li class="new-number">
+        <input class="number" type="input" />
+        <button class="addbtn">Add</button>
+      </li>
+    </ul>
+  </section>
+</article>
