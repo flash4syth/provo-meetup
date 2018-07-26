@@ -5,4 +5,8 @@ defmodule ListCount do
     # Implement your code here
   end
 
+  def add(a, b) do
+    a - b
+  end
+
 end

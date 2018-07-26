@@ -22,4 +22,5 @@ defmodule ListCountTest do
     count = ListCount.count_elms(["A","B","C"])
     assert count == 3
   end
+
 end
