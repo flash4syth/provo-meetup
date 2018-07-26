@@ -22,6 +22,41 @@ defmodule Sms.Users do
     Repo.all(SmsUser)
   end
 
+  def registered_sms_users do
+    query = from(u in "sms_users",
+      where: u.status == "registered"
+        and u.is_admin == false,
+      select: u.number)
+
+    Repo.all(query)
+  end
+
+  def stop_sms_users do
+    query = from(u in "sms_users",
+      where: u.status == "stop"
+        and u.is_admin == false,
+      select: u.number)
+
+    Repo.all(query)
+  end
+
+  def requested_sms_users do
+    query = from(u in "sms_users",
+      where: u.status == "request_pending"
+        and u.is_admin == false,
+      select: u.number)
+
+    Repo.all(query)
+  end
+
+  def admin_sms_users do
+    query = from(u in "sms_users",
+      where: u.status == "registered"
+        and u.is_admin == true,
+      select: u.number)
+
+    Repo.all(query)
+  end
   @doc """
   Gets a single sms_user.
 
