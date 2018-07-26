@@ -1,11 +1,12 @@
 defmodule Sms.Users.SmsUser do
   use Ecto.Schema
   import Ecto.Changeset
-
+  alias Sms.Users.EctoEnum
 
   schema "sms_users" do
     field :is_admin, :boolean, default: false
     field :number, :string
+    field :status, EctoEnum.StatusEnum
 
     timestamps()
   end

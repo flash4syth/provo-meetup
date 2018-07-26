@@ -1,10 +1,14 @@
 defmodule Sms.Repo.Migrations.CreateSmsUsers do
   use Ecto.Migration
+  alias Sms.Users.EctoEnum
 
-  def change do
+  def up do
+
+    EctoEnum.StatusEnum.create_type
     create table(:sms_users) do
       add :number, :string
       add :is_admin, :boolean, default: false, null: false
+      add :status, :status
 
       timestamps()
     end
@@ -16,5 +20,14 @@ defmodule Sms.Repo.Migrations.CreateSmsUsers do
       timestamps()
     end
 
+    create table(:twilio_numbers) do
+      add :number, :string
+    end
+  end
+
+  def down do
+    drop table(:sms_users)
+    drop table(:web_admins)
+    drop table(:twilio_numbers)
   end
 end
