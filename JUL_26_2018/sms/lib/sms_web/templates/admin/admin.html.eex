@@ -22,6 +22,7 @@
     -->
   </section>
   <section class="number-list-section">
+    <h2 class="title"><%= get_title(@conn.assigns.list_type) %></h2>
     <ul class="number-list">
       <%= for number <- @conn.assigns.number_list do %>
         <li class="sms-row">

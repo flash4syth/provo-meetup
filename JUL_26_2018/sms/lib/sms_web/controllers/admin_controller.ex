@@ -17,6 +17,7 @@ defmodule SmsWeb.AdminController do
     conn =
       put_layout(conn, "admin_layout.html")
       |> assign(:number_list, number_list)
+      |> assign(:list_type, params["list"])
 
 
     render(conn, "admin.html")
