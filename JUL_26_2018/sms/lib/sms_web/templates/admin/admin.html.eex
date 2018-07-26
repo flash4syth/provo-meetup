@@ -1,6 +1,6 @@
 <article class="admin-page">
   <section class="title-bar">
-    <h1>Admin Page</h1>
+    <h1 class="title">Sms Admin Page</h1>
   </section>
   <section class="side-bar">
     <a class="registered-numbers" href="registerednumbers">
@@ -23,10 +23,10 @@
     <ul class="number-list">
       <li class="sms-row">
         <input class="checkbox" type="checkbox" />
-        <span class="number">1234</span>
+        <span class="number">123-456-7890</span>
       </li>
       <li class="new-number">
-        <input class="number" type="input" />
+        <input class="number" type="input" placeholder="555-123-4567"/>
         <button class="addbtn">Add</button>
       </li>
     </ul>
