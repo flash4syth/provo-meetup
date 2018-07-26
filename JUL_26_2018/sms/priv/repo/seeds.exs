@@ -9,17 +9,20 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+Faker.start()
+
 alias Sms.Repo
 alias Sms.Users.SmsUser
+alias Faker.Phone.EnUs
 
 [
-  %SmsUser{number: "555-123-4567", status: :registered},
-  %SmsUser{number: "555-123-4567", status: :registered},
-  %SmsUser{number: "555-123-4567", status: :registered},
-  %SmsUser{number: "555-123-4567", status: :registered, is_admin: true},
-  %SmsUser{number: "555-123-4567", status: :stop},
-  %SmsUser{number: "555-123-4567", status: :stop},
-  %SmsUser{number: "555-123-4567", status: :request_pending},
-  %SmsUser{number: "555-123-4567", status: :request_pending},
+  %SmsUser{number: EnUs.phone(), status: :registered},
+  %SmsUser{number: EnUs.phone(), status: :registered},
+  %SmsUser{number: EnUs.phone(), status: :registered},
+  %SmsUser{number: EnUs.phone(), status: :registered, is_admin: true},
+  %SmsUser{number: EnUs.phone(), status: :stop},
+  %SmsUser{number: EnUs.phone(), status: :stop},
+  %SmsUser{number: EnUs.phone(), status: :request_pending},
+  %SmsUser{number: EnUs.phone(), status: :request_pending},
 ]
 |> Enum.each(fn(sms_user)-> Repo.insert!(sms_user) end)
