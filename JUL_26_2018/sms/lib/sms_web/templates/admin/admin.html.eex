@@ -3,25 +3,27 @@
     <h1 class="title">Sms Admin Page</h1>
   </section>
   <section class="side-bar">
-    <a class="registered-numbers" href="registerednumbers">
+    <a class="registered-numbers" href="/admin/registered">
       Registered Numbers
     </a>
-    <a class="subscription-requests" href="subscriptionrequests">
+    <a class="subscription-requests" href="/admin/requests">
       Subscription Requests
     </a>
-    <a class="stop-numbers" href="stopnumbers">
+    <a class="stop-numbers" href="/admin/stop">
       Stop Numbers
     </a>
-    <a class="admin-numbers" href="adminnumbers">
+    <a class="admin-numbers" href="/admin/admin">
       Admin Numbers
     </a>
-    <a class="twilio-numbers" href="twilionumbers">
+    <!--
+    <a class="twilio-numbers" href="/admin/twilionumbers">
       Twilio Numbers
     </a>
+    -->
   </section>
   <section class="number-list-section">
     <ul class="number-list">
-      <li><%= @conn.assigns.selected_list %></li>
+      <li><%= @conn.assigns.list_type %></li>
       <li class="sms-row">
         <input class="checkbox" type="checkbox" />
         <span class="number">123-456-7890</span>
