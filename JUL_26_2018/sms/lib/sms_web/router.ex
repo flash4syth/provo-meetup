@@ -17,6 +17,7 @@ defmodule SmsWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/admin", AdminController, :admin
   end
 
   # Other scopes may use custom stacks.

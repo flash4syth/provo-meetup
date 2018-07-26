@@ -1,1 +1,69 @@
 /* This file is for your main application css. */
+.admin-page {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 3fr) 1fr;
+  grid-template-areas:
+  ". titlebar titlebar titlebar ."
+  ". sidebar numberlist numberlist .";
+
+}
+
+.title-bar {
+  grid-area: titlebar;
+  background-color: black;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.title-bar > .title {
+  color: white;
+  text-align: center;
+  /* margin: 0, auto; */
+}
+
+.side-bar {
+  grid-area: sidebar;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  margin: 20px;
+  padding: 20px;
+  border: solid grey 1px;
+  border-radius: 10px
+}
+
+.side-bar > a {
+  font-weight: 600;
+}
+.number-list-section {
+  grid-area: numberlist;
+}
+
+.number-list > .sms-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr repeat(7, 1fr);
+  list-style: none;
+}
+
+.sms-row > .checkbox {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
+.number-list > .new-number {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.new-number > .addbtn {
+  color: white;
+  width: 50px;
+  border-radius: 5px;
+  background-color: purple;
+}
+
+.new-number > .number {
+  border-radius: 5px;
+}
