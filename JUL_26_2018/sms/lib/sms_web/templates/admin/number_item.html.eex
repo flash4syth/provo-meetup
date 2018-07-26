@@ -1,7 +1,0 @@
-<%= case @selected_list do %>
-<%= "registered" -> %>
-      <li class="sms-row">
-        <input class="checkbox" type="checkbox" />
-        <span class="number">123-456-7890</span>
-      </li>
-<% end %>

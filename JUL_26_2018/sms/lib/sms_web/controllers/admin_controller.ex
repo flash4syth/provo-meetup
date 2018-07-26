@@ -16,7 +16,6 @@ defmodule SmsWeb.AdminController do
     # remove default phoenix layout
     conn =
       put_layout(conn, "admin_layout.html")
-      |> assign(:list_type, params["list"])
       |> assign(:number_list, number_list)
 
 

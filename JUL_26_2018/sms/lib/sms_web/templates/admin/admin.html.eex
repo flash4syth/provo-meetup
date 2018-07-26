@@ -23,11 +23,12 @@
   </section>
   <section class="number-list-section">
     <ul class="number-list">
-      <li><%= @conn.assigns.list_type %></li>
-      <li class="sms-row">
-        <input class="checkbox" type="checkbox" />
-        <span class="number">123-456-7890</span>
-      </li>
+      <%= for number <- @conn.assigns.number_list do %>
+        <li class="sms-row">
+          <input class="checkbox" type="checkbox" />
+          <span class="number"><%= format_number(number) %></span>
+        </li>
+      <% end %>
       <li class="new-number">
         <input class="number" type="input" placeholder="555-123-4567"/>
         <button class="addbtn">Add</button>
