@@ -14,5 +14,6 @@ defmodule SmsWeb.AdminView do
   def get_title("stop"), do: "Stop Numbers"
   def get_title("requests"), do: "Subscription Requested Numbers"
   def get_title("admin"), do: "Admin Numbers"
+  def get_title(nil), do: "Registered Numbers"
 
 end
