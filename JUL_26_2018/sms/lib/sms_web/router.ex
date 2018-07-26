@@ -18,6 +18,7 @@ defmodule SmsWeb.Router do
 
     get "/", PageController, :index
     get "/admin", AdminController, :admin
+    get "/admin/:list", AdminController, :admin
   end
 
   # Other scopes may use custom stacks.

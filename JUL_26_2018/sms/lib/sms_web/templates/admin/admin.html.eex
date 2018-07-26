@@ -21,6 +21,7 @@
   </section>
   <section class="number-list-section">
     <ul class="number-list">
+      <li><%= @conn.assigns.selected_list %></li>
       <li class="sms-row">
         <input class="checkbox" type="checkbox" />
         <span class="number">123-456-7890</span>
