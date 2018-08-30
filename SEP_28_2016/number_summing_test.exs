@@ -2,7 +2,7 @@ Code.load_file("number_summing.exs", __DIR__)
 ExUnit.start()
 ExUnit.configure exclude: :pending, trace: true
 
-defmodule NumSumTest do
+defmodule NumberSummingTest do
   use ExUnit.Case
 
   # @tag :pending

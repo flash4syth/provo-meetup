@@ -1,8 +1,7 @@
-defmodule ListMunger do
+defmodule ListConcat do
 
   def concat_lists(a, b) do
     # Implement your code here to concat lists
-    a ++ b
   end
 
   def weave_lists(a, b) do
