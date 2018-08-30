@@ -32,4 +32,8 @@ defmodule ValueTypes do
     # Code
   #end
 
+  #def any_type(string) do
+    # Code
+  #end
+
 end
