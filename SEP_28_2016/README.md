@@ -7,12 +7,13 @@
 
 # List Concat
 
-1. Write a function that concatenates two lists.
+1. Write a function that combines (concatenates) two lists.
 
-2. Write a function that combines two lists by alternating elements from two lists, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+2. Write a function that combines two lists by alternating elements from two lists, e.g. [a,b,c], [1,2,3] => [a,1,b,2,c,3].
 
-~~Hint: see [Comprehensions](http://elixir-lang.org/getting-started/comprehensions.html) in the Elixir Guides.~~
-Hint: Use [|] pattern for prepending elements to a list.  Ex. [1, 2 | [3,4]] => [1,2,3,4]
+Hint: Use the [ head | tail] pattern for adding elements to the front of a list.
+Ex. [1, 2 | [3,4]] => [1,2,3,4], notice that the elements before the `|` are one or more
+individual elements separated by commas while a list comes after the `|`.
 
 # List Element Count
 

@@ -25,18 +25,12 @@ defmodule ListConcatTest do
     assert length(output_list) == length_a + length_b
   end
 
-  @tag :pending
+  # @tag :pending
   test "the first two elements of the list are 1,4 for [1,2,3] [4,5,6]" do
     list_a = [1,2,3]
     list_b = [4,5,6]
 
     output_list = ListConcat.weave_lists(list_a, list_b)
-    [ first_elem, second_elem | _list_tail ] = output_list
-
-    assert first_elem == 1
-    assert second_elem == 4
-
-
+    assert [ 1, 4 | _list_tail ] = output_list
   end
-
 end
