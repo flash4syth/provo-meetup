@@ -1,18 +1,18 @@
 Code.load_file("list_concat.exs", __DIR__)
 
 ExUnit.start()
-ExUnit.configure exclude: :pending, trace: true
+ExUnit.configure trace: true
 
 defmodule ListConcatTest do
   use ExUnit.Case
 
-  #@tag :pending
+  #@tag :skip
   test "outputs empty list for input of two empty lists" do
 
     assert ListConcat.concat_lists([],[]) == []
   end
 
-  @tag :pending
+  @tag :skip
   test "output list is the length of the two input lists" do
     list_a = [1,2]
     list_b = [3,4,5]
@@ -25,7 +25,7 @@ defmodule ListConcatTest do
     assert length(output_list) == length_a + length_b
   end
 
-  # @tag :pending
+  @tag :skip
   test "the first two elements of the list are 1,4 for [1,2,3] [4,5,6]" do
     list_a = [1,2,3]
     list_b = [4,5,6]
