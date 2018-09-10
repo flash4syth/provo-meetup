@@ -1,7 +1,8 @@
 # Sum Square Difference
 
-For the following exercises, first become familiar with the documentation on
+To do the following exercises, first become familiar with the documentation on
 the Enum.reduce function (https://hexdocs.pm/elixir/Enum.html)
+
 The sum of the squares of the first ten natural numbers is,
 
 * 1^2 + 2^2 + ... + 10^2 = 385
