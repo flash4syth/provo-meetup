@@ -1,0 +1,23 @@
+# Sms Messaging App aliases for Presentation:
+
+alias step0="echo && echo 'Lets build an sms messaging app in Elixir!' && echo 'Run \"mix test\" in each step to see if the test passes.' && echo"
+
+# Fail admin page test
+alias step1="echo && echo 'Step 1: Fail the admin view test' && git checkout -q 8c5164a"
+# Pass
+alias step2="echo && echo 'Step 2: Pass the test' && git checkout -q 198a527"
+
+# Fail admin route
+alias step3="echo && echo 'Step 3: Fail the /admin route' && git checkout -q d5a329e"
+# Pass
+alias step4="echo && echo 'Step 4: Pass the test' && git checkout -q 852d94b"
+
+# Fail admin list route
+alias step5="echo && echo 'Step 5: Fail the /admin/:list route' && git checkout -q 06bed50"
+# Pass
+alias step6="echo && echo 'Step 6: Pass the test' && git checkout -q 666226f"
+
+# Fail Sender.broadcast() test
+alias step7="echo && echo 'Step 7: Fail the broadcast() message function' && git checkout b35228c"
+# Pass
+alias step8="echo && echo 'Step 8: Pass the test' && git checkout 71e2ee1"
