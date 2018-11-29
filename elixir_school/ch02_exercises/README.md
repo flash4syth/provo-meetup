@@ -48,8 +48,8 @@ iex(3)> my_map["b"]
 iex(4)> my_map = %{ my_map | "b" => 3 } # Save the new version of my_map in my_map
 %{:a => 1, "b" => 3}
 
-If all the keys in a map are atoms like :new_atom, :another_atom, then maps
-can be written like this with the `:` on the right side--special syntax for
+If all the keys in a map are atoms like :new_atom or :another_atom, then maps
+can be written as below with the `:` on the right side--special syntax for
 atoms that you'll see in a couple other places.
 
 iex(5)> map_with_atom_keys = %{a: 1, b: 2}
