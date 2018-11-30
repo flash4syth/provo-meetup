@@ -39,6 +39,7 @@ because they can hold thousands of items and allow a programmer to access
 any item in the map really fast, no matter where it is located in the map.
 Map items are accessed with a key.  Try this in `iex`:
 
+```
 ex(1)> my_map = %{:a => 1, "b" => 2}
 %{:a => 1, "b" => 2}
 iex(2)> my_map[:a]
@@ -47,17 +48,19 @@ iex(3)> my_map["b"]
 2
 iex(4)> my_map = %{ my_map | "b" => 3 } # Save the new version of my_map in my_map
 %{:a => 1, "b" => 3}
+```
 
 If all the keys in a map are atoms like :new_atom or :another_atom, then maps
 can be written as below with the `:` on the right side--special syntax for
 atoms that you'll see in a couple other places.
-
+```
 iex(5)> map_with_atom_keys = %{a: 1, b: 2}
 %{a: 1, b: 2}
 iex(6)> map_with_atom_keys[:a] # note that `:` is on the left as usual
 1
 iex(7)> map_with_atom_keys.a # we can use this way to get the same as above
 1
+```
 
 That last example `map_with_atom_keys.a` only works when all of the keys
 of the map are atoms--they can't be strings or numbers ("string", 1, etc.)

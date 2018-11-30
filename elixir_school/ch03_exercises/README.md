@@ -5,6 +5,7 @@ that have no name.  It's lacking an explanation of how anonymous functions
 work, so this exercise will teach you a little more.  As usual, run the
 following in `iex`, Elixir's command line tool.
 
+```
 iex(1)> my_function = fn x ->
 ...(1)> IO.puts "x is: #{x}"
 ...(1)> end
@@ -15,6 +16,7 @@ x is: 2
 iex(3)> my_function.(:atom)
 x is: atom
 :ok
+```
 
 In this code we created an anonymous function.  I know it looks like it
 has a name because we typed `my_function = fn ...`, but that is just the
@@ -37,9 +39,10 @@ Those are the ones that come after the dot like `Enum.map`.  In this case
 `map` is a named function.  Let's try another function inside
 the Enum module with our own anonymous function.
 
+```
 iex(4)> Enum.map([1,2,3], fn number -> number + 1 end) # add 1 to each number
 [2, 3, 4]
-
+```
 We added 1 to each number of the list using an anonymous function that was
 created or defined right inside the parentheses `()` of `Enum.map()`.  Let's
 combine the two things we did above--using a variable name to refer to an
@@ -47,12 +50,12 @@ anonymous function, and pass that variable name to Enum.map() after the
 comma, so it will be the second argument which must be a function.
 (Note: A big reason functional languages are called functional is because
 they use functions as arguments to other functions.)
-
+```
 iex(5)> add_two = fn number -> number + 2 end # create our anonymous function
 #Function<6.127694169/1 in :erl_eval.expr/5>
 iex(6)> Enum.map([1, 2, 3], add_two)
 [3, 4, 5]
-
+```
 See how we used `add_two`, our anonymous function, inside Enum.map()?  If
 adding two is something we are going to do a lot it is nice to not have to
 type out the function every time.  We can instead use a variable that
