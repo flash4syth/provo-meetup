@@ -40,14 +40,14 @@ any item in the map really fast, no matter where it is located in the map.
 Map items are accessed with a key.  Try this in `iex`:
 
 ```
-ex(1)> my_map = %{:a => 1, "b" => 2}
-%{:a => 1, "b" => 2}
-iex(2)> my_map[:a]
-1
-iex(3)> my_map["b"]
+ex(1)> my_map = %{:key1 => "value_1", "key2" => 2}
+%{:key1 => "value_1", "key2" => 2}
+iex(2)> my_map[:key1]
+"value_1"
+iex(3)> my_map["key2"]
 2
-iex(4)> my_map = %{ my_map | "b" => 3 } # Save the new version of my_map in my_map
-%{:a => 1, "b" => 3}
+iex(4)> my_map = %{ my_map | "key2" => 3 } # create a new version of my_map and save it in my_map
+%{:key1 => 1, "key2" => 3}
 ```
 
 If all the keys in a map are atoms like :new_atom or :another_atom, then maps

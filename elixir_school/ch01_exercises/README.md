@@ -26,6 +26,7 @@ order of operations?
 
 2b) 1 + (2 - 2) * (5 / 10)
 ```
+
 # Exercise 2
 
 In `iex` enter the expressions below.  Note that `#` is just the start of a
@@ -33,5 +34,5 @@ comment and you don't have to enter that nor the words that follow.
 ```
 iex> names = ~w[John Mary Bob] # creates a list like ["John", "Mary", "Bob"]
 iex> "Hello #{Enum.random(names)}" # picks a random name to say hello to
-iex>  # push the up arrow to repeat the last thing you typed and try it again.
+iex>  # press the up arrow to repeat the last thing you typed and try it again.
 ```
